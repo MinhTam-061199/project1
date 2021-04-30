@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="cửa hàng thiết bị điện tử PT" />
+    <title>@ViewData["Title"] - WebBanHang</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+   
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                   
+                        <a asp-area="" asp-controller="Home" asp-action="Trangchu" class="navbar-brand"></a>
+
+                  </div>
+                <div class="navbar-collapse collapse">
+                    
+                    <ul class="nav navbar-nav">
+                        <li><img src="~/images/logo.pnj.png" width="75" height="75" /></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Trangchu">Trang chủ</a></li>
+                        <li> <a asp-area="" asp-controller="Home" asp-action=""></a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Sanphammoi">Sản phẩm mới</a></li>
+                        <li> <a asp-area="" asp-controller="Home" asp-action=""></a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Khuyenmai">Khuyến mãi</a></li>
+                        <li> <a asp-area="" asp-controller="Home" asp-action=""></a></li>
+                        <li>
+                            <button class="btn btn-secondary" data-toggle="dropdown">Danh mục sản phẩm</button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <button class="btn btn-secondary" data-toggle="dropdown">Modul_Cảm biến</button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="" class="dropdown-item">Cảm biến chuyển động</a></li>
+                                        <li><div class="dropdown-divider"></div></li>
+                                        <li><a href="" class="dropdown-item">Cảm biến siêu âm</a></li>
+                                        <li><div class="dropdown-divider"></div></li>
+                                        <li><a href="" class="dropdown-item">GPS_GSM_GPRS</a></li>
+                                        <li><div class="dropdown-divider"></div></li>
+                                        <li><a href="" class="dropdown-item">Kit phát triển</a></li>
+                                        <li><div class="dropdown-divider"></div></li>
+                                        <li><a href="" class="dropdown-item">PLC_module</a></li>
+                                        <li><div class="dropdown-divider"></div></li>
+                                        <li><a href="" class="dropdown-item">RF_WIRELESS_module</a></li>
+                                        <li><div class="dropdown-divider"></div></li>
+                                    </ul>
+                                </li>
+                                <li><div class="dropdown-divider"></div></li>
+
+                                <li><a href="" class="dropdown-item">Phụ kiện dụng cụ</a></li>
+                                <li><div class="dropdown-divider"></div></li>
+                                <li><a href="" class="dropdown-item">Smart_home</a></li>
+                            </ul>
+                        </li>
+
+                        <li> <a asp-area="" asp-controller="Home" asp-action="Oder">Gio hàng</a></li>
+                        <li> <a asp-area="" asp-controller="Home" asp-action="Login">Đăng nhập</a></li>
+
+                        <li>
+                            <div class="header_search fleft hidden-md">
+                                <a href="#"><i class="fa fa-search"></i></a>
+                                <form action="/search" class="nomargin" style="width:250px;">
+                                    <input name="s" class="form-control noboxshadow noradius" placeholder="Bạn muốn tìm gì..." type="text" /> <button class="button nomargin">Tìm kiếm</button>
+
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </nav>
+
+        <partial name="_CookieConsentPartial" />
+
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <img src="~/images/icondiachi.jpg"  width="75" height="75"/>
+                        <i class="text-center" aria-hidden="true">139 Phạm Huy Thông P6 Q.Gò vấp Tp.HCM</i>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="~/images/xetai.jpg" width="75" height="75" />
+                        <i class="text-center" aria-hidden="true"> Ship COD trên toàn quốc </i>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="hotline-box">
+                            <img src="~/images/dienthoai.jpg " width="75" height="75" />
+                            <i class="fa fa-phone" aria-hidden="true"> Đặt hàng nhanh: <span>0924363894</span></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <i class="text-center" aria-hidden="true">Thanh toán</i>
+                        <img src="~/images/môm.jpg" width="75" height="75" />
+                        <img src="~/images/ari.jpg" width="75" height="75" />
+
+                    </div>
+
+                </div>
+                   
+</footer>
+        </div>
+
+        <environment include="Development">
+            <script src="~/lib/jquery/dist/jquery.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+            <script src="~/js/site.js" asp-append-version="true"></script>
+        </environment>
+        <environment exclude="Development">
+            <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                    asp-fallback-test="window.jQuery"
+                    crossorigin="anonymous"
+                    integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+            </script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                    crossorigin="anonymous"
+                    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
+            </script>
+            <script src="~/js/site.min.js" asp-append-version="true"></script>
+        </environment>
+
+        @RenderSection("Scripts", required: false)
+</body>
+</html>
